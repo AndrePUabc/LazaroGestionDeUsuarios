@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Base de Datos Secundaria 72</title>
+    
+		<!-- Bootstrap core CSS -->
+		<link href="assets/dist/css/bootstrap.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="styles/navbar-top-fixed.css" rel="stylesheet">
+	</head>
+  
+	<body style='overflow-y:scroll'>
+		<nav class="navbar fixed-top navbar navbar-dark bg-dark">
+			<a class="navbar-brand" href="#index.html" id='navbar_id'>  </a>
+			<button class="btn btn-danger" id="logoutButton">Cerrar Sesion</button>
+		</nav>
+		<img class="d-block mx-auto mb-1" src="assets/brand/logo.jpg" alt="" width="100" height="100">
+        <label class="h1 text-center mb-3" id = "group-title" style="width: 100%;"></label>
+        <label class="h6 text-center mb-3" id = "group-subtitle" style="width: 100%;"></label>
+		
+		<div class="container">
+            
+			<h4 class='text-center'> Datos de profesor </h4>
+			<div class="form-row">
+				<div class="col-md-5 mb-3">
+				  <label for="form_fullname">Nombre Completo</label>
+				  <input type="text" class="form-control" id="form_fullname" disabled>
+				</div>	
+				
+				<div class="col-md-5 mb-3">
+				  <label for="form_email">Correo</label>
+				  <input type="text" class="form-control" id="form_email" disabled>
+				</div>
+					
+				<div class="col-md-2 mb-3">
+				  <label for="form_matri">Matricula</label>
+				  <input type="text" class="form-control" id="form_matri" disabled>
+				</div>
+			</div>
+			<h4 class='text-center'> Anuncios </h4>
+			<div id="container-anuncio"></div>	
+			<br>
+			<button class="btn btn-lg btn-primary btn-block" id="addAnuncio" style = 'display:none;'> Agregar Anuncio</button>
+			<br>
+			<div id="container-addAnuncio" style = 'display:none;'>
+				<br>
+				<h6>Ingrese datos del anuncio</h6>
+				<div class="form-row">
+					<div class="col-md-12">
+						<label for="anuncio_name" >Titulo</label>
+						<input type="text" class="form-control" id="anuncio_name">
+					</div>	
+				</div>
+				<div class="form-row">
+					<div class="col-md-12">
+						<label for="anuncio_desc" >Descripcion</label>
+						<input type="text" class="form-control" id="anuncio_desc">
+					</div>	
+				</div>
+				
+				<div class="form-row">
+					<div class="col-md-6">
+						<button type="submit" class="btn btn-primary btn-success" id='anuncio_crear'>Crear anuncio</button>
+					</div>
+					<div class="col-md-6">
+						<button type="submit" class="btn btn-danger btn-block" id='anuncio_cancel'>Cancelar</button>
+					</div>	
+				</div>
+			</div>
+			<br>
+			<div id = "alumnoList" style="display:none">
+				<h4 class='text-center'> Lista de Alumnos </h4>
+				<div class="form-row">
+					<div class="col-md-2">
+					<label>Matricula</label>
+					</div>	
+					<div class="col-md-5">
+						<label>Nombre Completo</label>
+					</div>
+					<div class="col-md-5">
+						<label>Calificacion</label>
+					</div>
+				</div>
+				<div id="container-alumnos"></div>
+				
+				<button class="btn btn-lg btn-primary btn-block" id="addAlumno"> Agregar Alumno</button>
+				<div id="container-search" style = 'display:none;'>
+					<br>
+					<h6>Ingrese matricula a buscar</h6>
+					<div class="form-row">
+						<div class="col-md-8">
+						<input type="text" class="form-control" id="search_matri">
+						</div>	
+						<div class="col-md-2">
+							<button type="submit" class="btn btn-primary btn-block" id='search_submit'>Buscar</button>
+						</div>
+						<div class="col-md-2">
+							<button type="submit" class="btn btn-danger btn-block" id='search_cancel'>Cancelar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+        </div>
+
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="/__/firebase/8.1.0/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use -->
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-functions.js"></script>
+		
+		<!-- Initialize Firebase -->
+		<script src="/__/firebase/init.js"></script>
+		<script src="js/grupo.js"></script>
+		<script src="js/navbar.js"></script>
+
+       </body>
+</html>     
